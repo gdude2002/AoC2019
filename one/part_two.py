@@ -1,17 +1,10 @@
 from math import floor
 
-from part_one import get_fuel, get_total
-
-
-total_before = get_total()
-
-
-def calculate_extra(fuel: int):
-    return floor(fuel / 3) - 2
+from part_one import get_fuel
 
 
 def get_real_total(fuel):
-    additional = calculate_extra(fuel)
+    additional = get_fuel(fuel)
 
     if additional <= 0:
         return fuel
@@ -25,9 +18,9 @@ total = 0
 with open("data.txt") as fh:
     for line in fh.readlines():
         if line.strip():
-            fuel = get_fuel(int(line))
+            current_fuel = get_fuel(int(line))
 
-            total += get_real_total(fuel)
+            total += get_real_total(current_fuel)
 
 print(f"Total: {total}")
 
