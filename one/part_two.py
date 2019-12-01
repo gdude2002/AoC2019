@@ -1,5 +1,3 @@
-from math import floor
-
 from part_one import get_fuel
 
 
