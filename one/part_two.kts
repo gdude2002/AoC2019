@@ -15,14 +15,10 @@ fun getRealTotal(fuel: Float) : Float {
     return fuel + getRealTotal(additional)
 }
 
-fun main() {
-    var total = 0f
+var total = 0f
 
-    File("data.txt").forEachLine {
-        total += getRealTotal(getFuel(it.toFloat()))
-    }
-
-    print("Total: ${total.toInt()}")
+File("data.txt").forEachLine {
+    total += getRealTotal(getFuel(it.toFloat()))
 }
 
-main()
+print("Total: ${total.toInt()}")

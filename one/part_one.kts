@@ -15,8 +15,4 @@ fun getTotal() : Float {
     return total
 }
 
-fun main() {
-    print("Total mass: ${getTotal().toInt()}")
-}
-
-main()
+print("Total mass: ${getTotal().toInt()}")

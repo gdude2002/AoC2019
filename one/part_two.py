@@ -23,6 +23,3 @@ with open("data.txt") as fh:
             total += get_real_total(current_fuel)
 
 print(f"Total: {total}")
-
-
-# Wrong: 5109605 (too high)
