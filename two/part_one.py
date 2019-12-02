@@ -27,10 +27,6 @@ for i, operation in enumerate(memory_iter):
     elif operation == 99:
         break
     else:
-        left = next(memory_iter, None)
-        right = next(memory_iter, None)
-        position = next(memory_iter, None)
-
         print(f"Unknown opcode: {operation}")
 
     print(f"{i} ({operation}) =>", memory)

@@ -28,10 +28,6 @@ def attempt(noun: int, verb: int):
                 memory[position] = memory[left] * memory[right]
         elif operation == 99:
             break
-        else:
-            left = next(memory_iter, None)
-            right = next(memory_iter, None)
-            position = next(memory_iter, None)
 
     return memory[0]
 
