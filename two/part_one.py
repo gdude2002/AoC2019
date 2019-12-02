@@ -11,10 +11,8 @@ with open("data.txt") as fh:
 
 memory_iter = iter(memory)
 
-print("Initial state:", memory)
 
-for i, operation in enumerate(memory_iter):
-
+for operation in memory_iter:
     if operation in (1, 2):
         left = next(memory_iter, None)
         right = next(memory_iter, None)
@@ -28,7 +26,5 @@ for i, operation in enumerate(memory_iter):
         break
     else:
         print(f"Unknown opcode: {operation}")
-
-    print(f"{i} ({operation}) =>", memory)
 
 print(f"Position 0: {memory[0]}")

@@ -10,13 +10,11 @@ with open("data.txt") as fh:
 
 def attempt(noun: int, verb: int):
     memory = orig_memory.copy()
+    memory_iter = iter(memory)
 
     memory[1], memory[2] = noun, verb
 
-    memory_iter = iter(memory)
-
-    for i, operation in enumerate(memory_iter):
-
+    for operation in memory_iter:
         if operation in (1, 2):
             left = next(memory_iter, None)
             right = next(memory_iter, None)
